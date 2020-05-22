@@ -4,7 +4,7 @@
 
 > Used custom-made by-class accuracy(`draw_accuracy.py`) calculating code instead of matcaffe. (Allowed by the TA, because docker environment does not support MATLAB yet) 
 
-| CaffeNet | AlexNet | CaffeNet + BatchNorm | AlexNet + BatchNorm | CaffeNet + BatchNorm + Dropout: 0.2 |
+| CaffeNet | AlexNet | CaffeNet + BatchNorm (ShwangNet) | AlexNet + BatchNorm | CaffeNet + BatchNorm + Dropout: 0.2 |
 | :---: | :---: | :---: | :---: | :---: |
 | 87.6% | 89.8% | __90.0%__ | 88.5% | 88.6% |
 
