@@ -17,13 +17,13 @@
 2. Make `path_test.txt` and `path_label_train.txt`
     * `$ python gen_lmdb.py`
 3. Store LMDB files in `./data/lmdb_train` and `./data/lmdb_test`
-    * `$ run_convert_imageset_to_lmdb_test.sh`  
-    * `$ run_convert_imageset_to_lmdb_train.sh`
+    * `$ sh run_convert_imageset_to_lmdb_test.sh`  
+    * `$ sh run_convert_imageset_to_lmdb_train.sh`
 
 ### Make meanfiles
 1. Create mean files: `./data/lmdb_train/gtsrb_train_mean.binaryproto` and `./data/lmdb_test/gtsrb_test_mean.binaryproto'
-    * `$ make_gtsrb_mean_test.sh`
-    * `$ make_gtsrb_mean_train.sh`
+    * `$ sh make_gtsrb_mean_test.sh`
+    * `$ sh make_gtsrb_mean_train.sh`
 
 ## III. Train (CaffeNet as an example)
 1. CaffeNet : `$ sh train_caffenet.sh`
