@@ -1,10 +1,16 @@
 # [RE510 | Lab3] GTSRB image classification - README
+## Result Summary
+| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
 
 ## I. Required python package for my python codes
-* `python`==2.7
+* `python==2.7`
 * `pycaffe`
 * `lmdb`
-* `pandas'
+* `pandas`
 
 ## II. Store & Preprocess data
 
