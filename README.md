@@ -12,7 +12,7 @@
 
 ## II. Store & Preprocess data
 
-### Make LMDB
+#### Make LMDB
 1. Store data in `<./data/train>` and `<./data/test>`
 2. Make `path_test.txt` and `path_label_train.txt`
     * `$ python gen_lmdb.py`
@@ -20,7 +20,7 @@
     * `$ sh run_convert_imageset_to_lmdb_test.sh`  
     * `$ sh run_convert_imageset_to_lmdb_train.sh`
 
-### Make meanfiles
+#### Make meanfiles
 1. Create mean files: `./data/lmdb_train/gtsrb_train_mean.binaryproto` and `./data/lmdb_test/gtsrb_test_mean.binaryproto'
     * `$ sh make_gtsrb_mean_test.sh`
     * `$ sh make_gtsrb_mean_train.sh`
@@ -32,7 +32,7 @@
 4. AlexNet + BatchNormalization: `$ sh train_alexnetbn.sh`
 5. CaffeNet + BatchNormalization + Dropout (0.2): `$ sh train_shwangdrop.sh`
 
-### IV. Post-processing
+## IV. Post-processing
 1. Parse log files (locaeted at `./models/$modelname/logs`) : `$ sh parse_$modelname_train_log.sh
 2. Draw train loss, test loss, and test accuracy log: `$ python draw_train_log.py`
 3. Draw test accuracy by class (__REPLACED MATCAFFE__): `$ python draw_accuracy.py`
