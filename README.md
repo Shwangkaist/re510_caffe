@@ -24,7 +24,7 @@
     * `$ sh run_convert_imageset_to_lmdb_train.sh`
 
 #### Make meanfiles
-1. Create mean files: `./data/lmdb_train/gtsrb_train_mean.binaryproto` and `./data/lmdb_test/gtsrb_test_mean.binaryproto'
+1. Create mean files: `./data/lmdb_train/gtsrb_train_mean.binaryproto` and `./data/lmdb_test/gtsrb_test_mean.binaryproto`
     * `$ sh make_gtsrb_mean_test.sh`
     * `$ sh make_gtsrb_mean_train.sh`
 
