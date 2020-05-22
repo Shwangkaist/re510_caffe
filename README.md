@@ -1,6 +1,6 @@
 # [RE510] GTSRB image classification
 ## Test Accuracy Summary
-> Test Log files stored in `./models/$modelname/logs/teststhsth.log` for Verification
+> Test Log files stored in `./models/$modelname/logs/test_sthsth.log` for Verification
 
 | CaffeNet | AlexNet | CaffeNet + BatchNorm | AlexNet + BatchNorm | CaffeNet + BatchNorm + Dropout: 0.2 |
 | :---: | :---: | :---: | :---: | :---: |
