@@ -1,6 +1,6 @@
 # [RE510 | Lab3] GTSRB image classification - README
 ## Test Accuracy Summary
-| CaffeNet | AlexNet | CaffeNet + Batch Normalization | AlexNet + Batch Normalization | CaffeNet + Batch Normalization + Dropout: 0.2 |
+| CaffeNet | AlexNet | CaffeNet + BatchNorm | AlexNet + BatchNorm | CaffeNet + BatchNorm + Dropout: 0.2 |
 | :---: | :---: | :---: | :---: | :---: |
 | 87.6% | 89.8% | __90.0%__ | 88.5% | 88.6% |
 
