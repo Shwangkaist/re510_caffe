@@ -10,10 +10,10 @@ layer {
   transform_param {
     mirror: false
     crop_size: 200
-    mean_file: "./data/mean_lmdb_test/gtsrb_test_mean.binaryproto"
+    mean_file: "./data/mean_lmdb_test_kaist/gtsrb_test_mean.binaryproto"
   }
   data_param {
-    source: "./data/lmdb_test"
+    source: "./data/lmdb_test_kaist"
     batch_size: 1
     backend: LMDB
   }

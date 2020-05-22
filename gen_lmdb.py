@@ -41,11 +41,27 @@ def make_path_label_txt(mode, data_root):
         f_test.close()
         print("==> TEST path saved. Img #: ", img_count)
 
+    elif mode == 'test_kaist':
+        f_test = open('path_test_kaist.txt', 'w')
+        for root, directories, files in os.walk(data_root):
+            for file in files:
+                    if file[-4:] == '.jpg':
+                        img_mode = root.split("/")[2]
+                        if img_mode == mode:
+                            data = os.path.join(root.replace(data_root,''), file) + '\n'
+                            img_count += 1
+                            print ("Test_kaist | Saving : ", data)
+                            f_test.write(data)
+        f_test.close()
+        print("==> TEST path saved. Img #: ", img_count)
+
+
 
 def main():
     data_root = './data'
-    make_path_label_txt('train', data_root)
-    make_path_label_txt('test', data_root)
+    # make_path_label_txt('train', data_root)
+    # make_path_label_txt('test', data_root)
+    make_path_label_txt('test_kaist', data_root)
 
 
 if __name__ == '__main__':

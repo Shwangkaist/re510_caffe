@@ -44,6 +44,7 @@ def draw_accuracy_hist(args):
 		# Predict test files
 		out = net.forward()
 		plabel = int(out['prob'][0].argmax(axis=0))
+		print (plabel)
 		count += 1
 		iscorrect = label == plabel
 
@@ -60,19 +61,23 @@ def draw_accuracy_hist(args):
 		total_count_dict[label] += 1
 
 
-		if not iscorrect:
-			sys.stdout.write("\r Error: key = %s, expected %i but predicted %i" % (key, label, plabel))
-			sys.stdout.write("\r Accuracy: %.1f%%" % (100.*correct/count))
-			sys.stdout.flush()
+		# if not iscorrect:
+		# 	sys.stdout.write("\r Error: key = %s, expected %i but predicted %i" % (key, label, plabel))
+		# 	sys.stdout.write("\r Accuracy: %.1f%%" % (100.*correct/count))
+		# 	sys.stdout.flush()
 
-	for key, value in correct_count_dict.items():
-		print (key, ":", value)
 
-	for key, value in total_count_dict.items():
-		correct_count_dict[key] = float(correct_count_dict[key]) / float(total_count_dict[key])
+		sys.stdout.write("\r Key = %s, expected %i but predicted %i" % (key, label, plabel))
+		sys.stdout.write("\r Accuracy: %.1f%%" % (100.*correct/count))
+		sys.stdout.flush()
+	# for key, value in correct_count_dict.items():
+	# 	print (key, ":", value)
 
-	for key, value in correct_count_dict.items():
-		print (key, ":", value)
+	# # for key, value in total_count_dict.items():
+	# # 	correct_count_dict[key] = float(correct_count_dict[key]) / float(total_count_dict[key])
+
+	# for key, value in correct_count_dict.items():
+	# 	print (key, ":", value)
 
 	print("\n" + str(correct) + " out of " + str(count) + " were classified correctly")
 
@@ -97,20 +102,25 @@ if __name__ == '__main__':
 	# parser.add_argument('--save_path', default = './models/alexnet/plots/accuracy_by_class.png')
 	# parser.add_argument('--lmdb_path', default = './data/lmdb_test/')
 	# parser.add_argument('--model', default = 'alexnet')
-	# parser.add_argument('--prototxt_path', default='./models/shwangnet/test.prototxt')
-	# parser.add_argument('-caffemodel_path', default='./data/trained_models/shwangnet/solver_iter_15000.caffemodel')
-	# parser.add_argument('--save_path', default = './models/shwangnet/plots/accuracy_by_class.png')
-	# parser.add_argument('--lmdb_path', default = './data/lmdb_test/')
-	# parser.add_argument('--model', default = 'caffenet_BN')
+	parser.add_argument('--prototxt_path', default='./models/shwangnet/test.prototxt')
+	parser.add_argument('-caffemodel_path', default='./data/trained_models/shwangnet/solver_iter_15000.caffemodel')
+	parser.add_argument('--save_path', default = './models/shwangnet/plots/accuracy_by_class_.png')
+	parser.add_argument('--lmdb_path', default = './data/lmdb_test/')
+	parser.add_argument('--model', default = 'caffenet_BN')
 	# parser.add_argument('--prototxt_path', default='./models/alexnetbn/test.prototxt')
 	# parser.add_argument('-caffemodel_path', default='./data/trained_models/alexnetbn/solver_iter_15000.caffemodel')
 	# parser.add_argument('--save_path', default = './models/alexnetbn/plots/accuracy_by_class.png')
 	# parser.add_argument('--lmdb_path', default = './data/lmdb_test/')
 	# parser.add_argument('--model', default = 'alexnet_BN')
-	parser.add_argument('--prototxt_path', default='./models/shwangdrop/test.prototxt')
-	parser.add_argument('-caffemodel_path', default='./data/trained_models/shwangdrop/solver_iter_15000.caffemodel')
-	parser.add_argument('--save_path', default = './models/shwangdrop/plots/accuracy_by_class.png')
-	parser.add_argument('--lmdb_path', default = './data/lmdb_test/')
-	parser.add_argument('--model', default = 'CaffeNet_BN_drop_0.2')
-	args = parser.parse_args()
+	# parser.add_argument('--prototxt_path', default='./models/shwangdrop/test.prototxt')
+	# parser.add_argument('-caffemodel_path', default='./data/trained_models/shwangdrop/solver_iter_15000.caffemodel')
+	# parser.add_argument('--save_path', default = './models/shwangdrop/plots/accuracy_by_class.png')
+	# parser.add_argument('--lmdb_path', default = './data/lmdb_test/')
+	# parser.add_argument('--model', default = 'CaffeNet_BN_drop_0.2')
+	# parser.add_argument('--prototxt_path', default='./models/shwangnet/test.prototxt')
+	# parser.add_argument('-caffemodel_path', default='./data/trained_models/shwangnet/solver_iter_15000.caffemodel')
+	# parser.add_argument('--save_path', default = './models/shwangnet/plots/accuracy_by_class_kaist.png')
+	# parser.add_argument('--lmdb_path', default = './data/lmdb_test_kaist/')
+	# parser.add_argument('--model', default = 'caffenet_BN_kaistset')
+	# args = parser.parse_args()
 	draw_accuracy_hist(args)

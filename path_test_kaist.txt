@@ -1,0 +1,3 @@
+/test_kaist/10.jpg
+/test_kaist/8.jpg
+/test_kaist/9.jpg
