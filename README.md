@@ -1,8 +1,8 @@
 # [RE510 | Lab3] GTSRB image classification - README
-## Result Summary
-| Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11 | #12 |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269 | 254 |
+## Test Accuracy Summary
+| CaffeNet | AlexNet | CaffeNet + Batch Normalization | AlexNet + Batch Normalization | CaffeNet + Batch Normalization + Dropout: 0.2 |
+| :---: | :---: | :---: | :---: | :---: |
+| 87.6% | 89.8% | __90.0%__ | 88.5% | 88.6% |
 
 ## I. Required python package for my python codes
 * `python==2.7`
