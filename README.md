@@ -1,6 +1,6 @@
 # [RE510] GTSRB image classification
 ## Test Accuracy Summary
-> Test Log files stored in `./models/$modelname/logs/test_sthsth.log` for Verification
+> Best accuracy log file in `./models/shwangnet/logs/test_shwangnet_lr_0.001_weight_decay_0.005.log` for Verification
 
 > Used custom-made by-class accuracy(`draw_accuracy.py`) calculating code instead of matcaffe. (Allowed by the TA, because docker environment does not support MATLAB yet) 
 
