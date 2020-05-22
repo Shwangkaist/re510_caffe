@@ -28,7 +28,7 @@
     * `$ sh make_gtsrb_mean_test.sh`
     * `$ sh make_gtsrb_mean_train.sh`
 
-## III. Train (CaffeNet as an example)
+## III. Train
 1. CaffeNet : `$ sh train_caffenet.sh`
 2. AlexNet  : `$ sh train_alexnet.sh`
 3. CaffeNet + BatchNormalization:`$ sh train_shwangnet.sh`
