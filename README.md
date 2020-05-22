@@ -15,7 +15,7 @@
 ### Make LMDB
 1. Store data in `<./data/train>` and `<./data/test>`
 2. Make `path_test.txt` and `path_label_train.txt`
-  * Run `$ python gen_lmdb.py'
+ * Run `$ python gen_lmdb.py'
 3. Store LMDB files in `./data/lmdb_train` and `./data/lmdb_test`
   * Run `$ run_convert_imageset_to_lmdb_test.sh`  
   * Run `$ run_convert_imageset_to_lmdb_train.sh`
