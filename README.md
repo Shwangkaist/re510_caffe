@@ -35,4 +35,4 @@
 ### IV. Post-processing
 1. Parse log files (locaeted at `./models/$modelname/logs`) : `$ sh parse_$modelname_train_log.sh
 2. Draw train loss, test loss, and test accuracy log: `$ python draw_train_log.py`
-3. Draw test accuracy by class (REPLACED MATCAFFE): `$ python draw_accuracy.py`
+3. Draw test accuracy by class (__REPLACED MATCAFFE__): `$ python draw_accuracy.py`
