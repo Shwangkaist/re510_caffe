@@ -1,4 +1,4 @@
-# [RE510 | Lab3] GTSRB image classification - README
+# [RE510] GTSRB image classification
 ## Test Accuracy Summary
 | CaffeNet | AlexNet | CaffeNet + BatchNorm | AlexNet + BatchNorm | CaffeNet + BatchNorm + Dropout: 0.2 |
 | :---: | :---: | :---: | :---: | :---: |
