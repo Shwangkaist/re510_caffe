@@ -12,11 +12,12 @@ def make_path_label_txt(mode, data_root):
         for root, directories, files in os.walk(data_root):
             for file in files:
                 if file[-4:] == ".ppm":
-                    img_mode = root.split("/")[-4]
+                    img_mode = root.split("/")[2]
                     if img_mode == mode:
                         label = root.split("/")[-1].lstrip('0')
                         data = os.path.join(root.replace(data_root,''), file) + " " + str(label) + '\n'
                         f_train.write(data)
+                        print ("Train | Saving : ", data)
                         img_count += 1
 
         f_train.close()
@@ -30,12 +31,12 @@ def make_path_label_txt(mode, data_root):
         for root, directories, files in os.walk(data_root):
             for file in files:
                     if file[-4:] == '.ppm':
-                        img_mode = root.split("/")[-3]
+                        img_mode = root.split("/")[2]
                         if img_mode == mode:
                             gt_label = int(df.loc[df['Filename'] == file]['ClassId'])
-                            print (gt_label)
                             data = os.path.join(root.replace(data_root,''), file) + " " + str(gt_label) + '\n'
                             img_count += 1
+                            print ("Test | Saving : ", data)
                             f_test.write(data)
         f_test.close()
         print("==> TEST path saved. Img #: ", img_count)
@@ -43,7 +44,7 @@ def make_path_label_txt(mode, data_root):
 
 def main():
     data_root = './data'
-    # make_path_label_txt('train', data_root)
+    make_path_label_txt('train', data_root)
     make_path_label_txt('test', data_root)
 
 
